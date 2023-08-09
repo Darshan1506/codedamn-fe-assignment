@@ -82,7 +82,7 @@ const interests: string[] = [
 ];
 const Languages: string[] = ["English", "Mandarin", "Cantonese Chinese"];
 
-const page = () => {
+const Page = () => {
   const [skills, setSkills] = useState<string[]>([]);
   const router = useRouter();
   useEffect(() => {
@@ -179,4 +179,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

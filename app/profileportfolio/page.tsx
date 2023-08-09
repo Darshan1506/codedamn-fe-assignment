@@ -34,7 +34,7 @@ interface UserData {
   profession: string;
   xp: boolean;
 }
-const page = () => {
+const Page = () => {
   const [userData, setUserData] = useState<UserData | null>(null);
 
   useEffect(() => {
@@ -138,4 +138,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
