@@ -15,13 +15,13 @@ export function AddEducation() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">Add Education +</Button>
+        <Button variant="outline">Add Education </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[800px]">
         <DialogHeader>
           <DialogTitle>Add Education</DialogTitle>
           <DialogDescription>
-            Make changes to your profile here. Click save when you're done.
+            Make changes to your profile here. Click save when you &apos; re done.
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
