@@ -61,17 +61,18 @@ const Sidebar: React.FC = () => {
           {menuItems.map((menu: MenuItem) => {
             const classes = getNavItemClasses(menu);
             return (
-              <div className={classes} key={menu.id}>
+              <div className={`${classes} ${activeMenu?.id === menu.id ? 'border-l-4 border-black' : ''}`} key={menu.id}  style={activeMenu?.id === menu.id ? {  } : {}}>
                 <Link
-                  href={menu.link}
-                  passHref
-                  className={"flex py-4 px-3 items-center w-full h-full"}
-                >
-                  <AiOutlineChrome size={22} />
-                  <span className={"text-md font-medium text-text-light "}>
-                    {menu.label}
-                  </span>
-                </Link>
+  href={menu.link}
+  passHref
+  className={"flex py-4 px-3 items-center w-full h-full"}
+  
+>
+  <AiOutlineChrome size={activeMenu?.id === menu.id ? 24 : 22} />
+  <span className={"text-md font-medium text-text-light "} style={activeMenu?.id === menu.id ? { color: '#00000', fontWeight: 'bold' } : {}}>
+    {menu.label}
+  </span>
+</Link>
               </div>
             );
           })}
